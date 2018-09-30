@@ -7,7 +7,7 @@ hbs.registerPartials(__dirname+'/views/partials');
 app.set('view engine','hbs');
 hbs.registerHelper('getdate',()=>
 {
-  return '12 march';
+  return new Date().toString();
 });
 hbs.registerHelper('capit',(data)=>
 {
