@@ -3,7 +3,6 @@ const hbs =require('hbs');
 var app =express();
 const fs=require('fs');
 const bodyParser=require('body-parser');
-var stringify = require('json-stringify-safe');
 const port = process.env.PORT || 3000;
 hbs.registerPartials(__dirname+'/views/partials');
 app.set('view engine','hbs');
@@ -75,7 +74,6 @@ app.get('/fill-form-post',(req,res)=>
 
 app.post('/form-output-post',(req,res)=>
 {
-var ans= stringify(req,null,2);
 res.send(req.body);
 });
 
